@@ -6,7 +6,7 @@
 /*   By: rchavez <rchavez@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 15:39:47 by rchavez           #+#    #+#             */
-/*   Updated: 2024/09/11 09:59:41 by rchavez          ###   ########.fr       */
+/*   Updated: 2024/09/11 15:38:15 by rchavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ t_plane	*build_plane(char **arr, int xmin, int ymin)
 	plane->grid = (void ***)malloc(sizeof(void **) * plane->width);
 	if (!plane->grid)
 		return (destroy_plane(plane), NULL);
-	i = 0;
-	while (i < plane->width)
+	i = -1;
+	while (++i < plane->width)
 	{
 		j = -1;
 		plane->grid[i] = (void **)malloc(sizeof(void *) * plane->heigth);
