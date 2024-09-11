@@ -6,7 +6,7 @@
 /*   By: rchavez <rchavez@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 15:34:56 by rchavez           #+#    #+#             */
-/*   Updated: 2024/09/11 10:00:49 by rchavez          ###   ########.fr       */
+/*   Updated: 2024/09/11 16:17:08 by rchavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ typedef struct ray_s
 }			t_ray;
 
 size_t	maxlen(char **arr);
+int		strnum(char **arr);
 t_plane	*build_plane(char **arr, int xmin, int ymin);
 void	destroy_plane(t_plane *plane);
 void	*paccess(t_point p);

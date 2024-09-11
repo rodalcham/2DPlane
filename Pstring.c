@@ -6,7 +6,7 @@
 /*   By: rchavez <rchavez@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 15:57:54 by rchavez           #+#    #+#             */
-/*   Updated: 2024/09/11 10:01:17 by rchavez          ###   ########.fr       */
+/*   Updated: 2024/09/11 16:16:56 by rchavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,14 @@ size_t	maxlen(char **arr)
 		i++;
 	}
 	return (ret);
+}
+
+int	strnum(char **arr)
+{
+	int	i;
+
+	i = 0;
+	while (arr[i])
+		i++;
+	return (i);
 }

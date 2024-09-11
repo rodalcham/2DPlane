@@ -6,7 +6,7 @@
 /*   By: rchavez <rchavez@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 15:39:47 by rchavez           #+#    #+#             */
-/*   Updated: 2024/09/11 15:38:15 by rchavez          ###   ########.fr       */
+/*   Updated: 2024/09/11 16:17:21 by rchavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ t_plane	*build_plane(char **arr, int xmin, int ymin)
 	plane = (t_plane *)malloc(sizeof(t_plane));
 	if (!plane)
 		return (destroy_plane(plane), NULL);
-	plane->heigth = (sizeof(arr) / sizeof(char *)) - 1;
+	plane->heigth = strnum(arr);
 	plane->width = maxlen(arr);
 	plane->xmin = xmin;
 	plane->ymin = ymin;
