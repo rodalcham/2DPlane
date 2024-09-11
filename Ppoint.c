@@ -1,48 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pstring.c                                          :+:      :+:    :+:   */
+/*   Ppoint.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rchavez@student.42heilbronn.de <rchavez    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/09 15:57:54 by rchavez           #+#    #+#             */
-/*   Updated: 2024/09/09 20:03:11 by rchavez@stu      ###   ########.fr       */
+/*   Created: 2024/09/10 08:31:07 by rchavez@stu       #+#    #+#             */
+/*   Updated: 2024/09/11 08:47:23 by rchavez@stu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Plane.h"
 
-static size_t	ft_strlen(char *str)
+void	*paccess(t_point p)
 {
-	size_t	ret;
+	int	x;
+	int	y;
 
-	if (!str)
-		return (0);
-	ret = 0;
-	while (*str)
-	{
-		ret++;
-		str++;
-	}
-	return (ret);
+	x = fixed_to_int(p.x) - p.plane->xmin;
+	y = fixed_to_int(p.y) - p.plane->ymin;
+	if (x < 0 || x >= p.plane->width || y < 0 || y >= p.plane->heigth)
+		return (NULL);
+	return (p.plane->grid[x][y]);
 }
 
-size_t	maxlen(char **arr)
+t_fixed	distance(t_point a, t_point b)
 {
-	size_t	ret;
-	size_t	temp;
-	int		i;
+	t_fixed	x;
+	t_fixed	y;
+	t_fixed	ret;
 
-	ret = 0;
-	i = 0;
-	if (!arr)
-		return (0);
-	while (arr[i])
-	{
-		temp = ft_strlen(arr[i]);
-		if (temp > ret)
-			ret = temp;
-		i++;
-	}
+	x = a.x - b.x;
+	y = a.y - b.y;
+	ret = sqrt(f_pow(x, 2) + f_pow(y, 2));
 	return (ret);
 }

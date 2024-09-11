@@ -1,48 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pstring.c                                          :+:      :+:    :+:   */
+/*   Fangle.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rchavez@student.42heilbronn.de <rchavez    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/09 15:57:54 by rchavez           #+#    #+#             */
-/*   Updated: 2024/09/09 20:03:11 by rchavez@stu      ###   ########.fr       */
+/*   Created: 2024/09/10 12:16:01 by rchavez@stu       #+#    #+#             */
+/*   Updated: 2024/09/11 09:04:22 by rchavez@stu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Plane.h"
+#include "Fixed.h"
 
-static size_t	ft_strlen(char *str)
+t_fixed	f_tan(t_fixed d)
 {
-	size_t	ret;
+	double	temp;
 
-	if (!str)
-		return (0);
-	ret = 0;
-	while (*str)
-	{
-		ret++;
-		str++;
-	}
-	return (ret);
+	temp = fixed_to_double(d);
+	temp = temp * PI / Q3;
+	return (double_to_fixed(tan(temp)));
 }
 
-size_t	maxlen(char **arr)
+t_fixed	f_sin(t_fixed d)
 {
-	size_t	ret;
-	size_t	temp;
-	int		i;
+	double	temp;
 
-	ret = 0;
-	i = 0;
-	if (!arr)
-		return (0);
-	while (arr[i])
-	{
-		temp = ft_strlen(arr[i]);
-		if (temp > ret)
-			ret = temp;
-		i++;
-	}
-	return (ret);
+	temp = fixed_to_double(d);
+	temp = temp * PI / Q3;
+	return (double_to_fixed(sin(temp)));
+}
+
+t_fixed	f_cos(t_fixed d)
+{
+	double	temp;
+
+	temp = fixed_to_double(d);
+	temp = temp * PI / Q3;
+	return (double_to_fixed(cos(temp)));
 }
