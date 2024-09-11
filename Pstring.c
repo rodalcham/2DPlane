@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Pstring.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rchavez@student.42heilbronn.de <rchavez    +#+  +:+       +#+        */
+/*   By: rchavez <rchavez@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 15:57:54 by rchavez           #+#    #+#             */
-/*   Updated: 2024/09/09 20:03:11 by rchavez@stu      ###   ########.fr       */
+/*   Updated: 2024/09/11 10:01:17 by rchavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

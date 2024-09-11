@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Plane.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rchavez@student.42heilbronn.de <rchavez    +#+  +:+       +#+        */
+/*   By: rchavez <rchavez@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 15:34:56 by rchavez           #+#    #+#             */
-/*   Updated: 2024/09/10 12:42:06 by rchavez@stu      ###   ########.fr       */
+/*   Updated: 2024/09/11 10:00:49 by rchavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,14 @@ typedef struct plane_s
 	int		ymin;
 }			t_plane;
 
-typedef struct	point_s
+typedef struct point_s
 {
 	t_fixed	x;
 	t_fixed	y;
 	t_plane	*plane;
 }			t_point;
 
-typedef	struct	ray_s
+typedef struct ray_s
 {
 	t_point	*src;
 	t_fixed	angle;
@@ -44,6 +44,5 @@ t_plane	*build_plane(char **arr, int xmin, int ymin);
 void	destroy_plane(t_plane *plane);
 void	*paccess(t_point p);
 t_point	from_x(t_ray r, t_fixed xdelta);
-
 
 #endif

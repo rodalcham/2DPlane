@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Pray.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rchavez@student.42heilbronn.de <rchavez    +#+  +:+       +#+        */
+/*   By: rchavez <rchavez@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 08:30:07 by rchavez@stu       #+#    #+#             */
-/*   Updated: 2024/09/11 09:14:58 by rchavez@stu      ###   ########.fr       */
+/*   Updated: 2024/09/11 10:01:45 by rchavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ t_point	from_x(t_ray r, t_fixed xdelta)
 	t_point	ret;
 	t_fixed	xsign;
 	t_fixed	ysign;
-	t_fixed	ydelta;
 
 	if (r.angle > int_to_fixed(Q1) && r.angle < int_to_fixed(Q3))
 		ysign = int_to_fixed(1);
@@ -25,8 +24,8 @@ t_point	from_x(t_ray r, t_fixed xdelta)
 		ysign = int_to_fixed(0);
 	else
 		ysign = int_to_fixed(-1);
-	if ((r. angle >= int_to_fixed(Q1) && r.angle < int_to_fixed(Q2)) ||
-		(r.angle > int_to_fixed(Q4) && r. angle <= int_to_fixed(Q5)))
+	if ((r. angle >= int_to_fixed(Q1) && r.angle < int_to_fixed(Q2))
+		|| (r.angle > int_to_fixed(Q4) && r. angle <= int_to_fixed(Q5)))
 		xsign = int_to_fixed(1);
 	else if (r.angle == int_to_fixed(Q2) || r.angle == int_to_fixed(Q4))
 		xsign = int_to_fixed(0);
@@ -46,7 +45,6 @@ t_point	from_y(t_ray r, t_fixed ydelta)
 	t_point	ret;
 	t_fixed	xsign;
 	t_fixed	ysign;
-	t_fixed	xdelta;
 
 	if (r.angle > int_to_fixed(Q1) && r.angle < int_to_fixed(Q3))
 		ysign = int_to_fixed(1);
@@ -54,8 +52,8 @@ t_point	from_y(t_ray r, t_fixed ydelta)
 		ysign = int_to_fixed(0);
 	else
 		ysign = int_to_fixed(-1);
-	if ((r. angle >= int_to_fixed(Q1) && r.angle < int_to_fixed(Q2)) ||
-		(r.angle > int_to_fixed(Q4) && r. angle <= int_to_fixed(Q5)))
+	if ((r. angle >= int_to_fixed(Q1) && r.angle < int_to_fixed(Q2))
+		|| (r.angle > int_to_fixed(Q4) && r. angle <= int_to_fixed(Q5)))
 		xsign = int_to_fixed(1);
 	else if (r.angle == int_to_fixed(Q2) || r.angle == int_to_fixed(Q4))
 		xsign = int_to_fixed(0);
@@ -83,8 +81,8 @@ t_point	from_h(t_ray r, t_fixed hdelta)
 		ysign = int_to_fixed(0);
 	else
 		ysign = int_to_fixed(-1);
-	if ((r. angle >= int_to_fixed(Q1) && r.angle < int_to_fixed(Q2)) ||
-		(r.angle > int_to_fixed(Q4) && r. angle <= int_to_fixed(Q5)))
+	if ((r. angle >= int_to_fixed(Q1) && r.angle < int_to_fixed(Q2))
+		|| (r.angle > int_to_fixed(Q4) && r. angle <= int_to_fixed(Q5)))
 		xsign = int_to_fixed(1);
 	else if (r.angle == int_to_fixed(Q2) || r.angle == int_to_fixed(Q4))
 		xsign = int_to_fixed(0);

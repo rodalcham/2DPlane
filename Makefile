@@ -6,15 +6,16 @@
 #    By: rchavez <rchavez@student.42heilbronn.de    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/09 10:20:04 by rchavez           #+#    #+#              #
-#    Updated: 2024/09/09 10:44:40 by rchavez          ###   ########.fr        #
+#    Updated: 2024/09/11 09:57:10 by rchavez          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = fixed.a
+NAME = plane.a
 
-HSRC = Fixed.h
+HSRC = Fixed.h Plane.h
 
-SRC = Fdouble.c Ffloat.c Fint.c Fmath.c
+SRC = Fdouble.c Ffloat.c Fint.c Fmath.c Fangle.c Plane.c Ppoint.c Pray.c\
+	Pstring.c
 
 OBJ = $(SRC:%.c=%.o)
 

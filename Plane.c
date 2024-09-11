@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Plane.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rchavez@student.42heilbronn.de <rchavez    +#+  +:+       +#+        */
+/*   By: rchavez <rchavez@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 15:39:47 by rchavez           #+#    #+#             */
-/*   Updated: 2024/09/10 12:41:46 by rchavez@stu      ###   ########.fr       */
+/*   Updated: 2024/09/11 09:59:41 by rchavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void	destroy_plane(t_plane *plane)
 		if (plane->grid[x])
 			free(plane->grid[x]);
 		else
-			break;
+			break ;
 		x++;
 	}
 	free(plane->grid);
