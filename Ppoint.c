@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Ppoint.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rchavez@student.42heilbronn.de <rchavez    +#+  +:+       +#+        */
+/*   By: rchavez <rchavez@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 08:31:07 by rchavez@stu       #+#    #+#             */
-/*   Updated: 2024/09/11 08:47:23 by rchavez@stu      ###   ########.fr       */
+/*   Updated: 2024/09/12 11:02:14 by rchavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*paccess(t_point p)
 	y = fixed_to_int(p.y) - p.plane->ymin;
 	if (x < 0 || x >= p.plane->width || y < 0 || y >= p.plane->heigth)
 		return (NULL);
-	return (p.plane->grid[x][y]);
+	return (p.plane->grid[y][x]);
 }
 
 t_fixed	distance(t_point a, t_point b)
