@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Pray.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rchavez <rchavez@student.42heilbronn.de    +#+  +:+       +#+        */
+/*   By: rchavez@student.42heilbronn.de <rchavez    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 08:30:07 by rchavez@stu       #+#    #+#             */
-/*   Updated: 2024/09/11 10:01:45 by rchavez          ###   ########.fr       */
+/*   Updated: 2024/09/13 14:15:01 by rchavez@stu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ t_point	from_y(t_ray r, t_fixed ydelta)
 	else
 		xsign = int_to_fixed(-1);
 	ret.plane = r.src->plane;
-	ret.y = r.src->y + f_mult(ydelta, xsign);
+	ret.y = r.src->y + f_mult(ydelta, ysign);
 	if (xsign)
 		ret.x = r.src->x + f_div(ydelta, f_tan(r.angle));
 	else
