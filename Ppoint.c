@@ -6,7 +6,7 @@
 /*   By: rchavez <rchavez@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 08:31:07 by rchavez@stu       #+#    #+#             */
-/*   Updated: 2024/09/12 14:51:08 by rchavez          ###   ########.fr       */
+/*   Updated: 2024/09/17 14:06:23 by rchavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ t_fixed	distance(t_point a, t_point b)
 
 	x = a.x - b.x;
 	y = a.y - b.y;
-	ret = sqrt(f_pow(x, 2) + f_pow(y, 2));
+	ret = f_sqrt(f_pow(x, 2) + f_pow(y, 2));
 	return (ret);
 }

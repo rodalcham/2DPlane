@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fangle.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rchavez@student.42heilbronn.de <rchavez    +#+  +:+       +#+        */
+/*   By: rchavez <rchavez@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 12:16:01 by rchavez@stu       #+#    #+#             */
-/*   Updated: 2024/09/11 09:04:22 by rchavez@stu      ###   ########.fr       */
+/*   Updated: 2024/09/17 10:29:56 by rchavez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
