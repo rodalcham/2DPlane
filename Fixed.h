@@ -6,7 +6,7 @@
 /*   By: rchavez@student.42heilbronn.de <rchavez    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 09:23:41 by rchavez           #+#    #+#             */
-/*   Updated: 2024/09/11 09:04:27 by rchavez@stu      ###   ########.fr       */
+/*   Updated: 2024/09/24 10:41:00 by rchavez@stu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdint.h>
 # include <math.h>
+# include "../MLibft/libft.h"
 
 # define POINT 16
 # define SCALE 65536
