@@ -3,29 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   Pstring.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rchavez <rchavez@student.42heilbronn.de    +#+  +:+       +#+        */
+/*   By: rchavez@student.42heilbronn.de <rchavez    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 15:57:54 by rchavez           #+#    #+#             */
-/*   Updated: 2024/09/11 16:16:56 by rchavez          ###   ########.fr       */
+/*   Updated: 2024/09/24 10:46:22 by rchavez@stu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Plane.h"
 
-static size_t	ft_strlen(char *str)
-{
-	size_t	ret;
+// static size_t	ft_strlen(char *str)
+// {
+// 	size_t	ret;
 
-	if (!str)
-		return (0);
-	ret = 0;
-	while (*str)
-	{
-		ret++;
-		str++;
-	}
-	return (ret);
-}
+// 	if (!str)
+// 		return (0);
+// 	ret = 0;
+// 	while (*str)
+// 	{
+// 		ret++;
+// 		str++;
+// 	}
+// 	return (ret);
+// }
 
 size_t	maxlen(char **arr)
 {
