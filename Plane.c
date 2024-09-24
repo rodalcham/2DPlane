@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Plane.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rchavez <rchavez@student.42heilbronn.de    +#+  +:+       +#+        */
+/*   By: rchavez@student.42heilbronn.de <rchavez    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 15:39:47 by rchavez           #+#    #+#             */
-/*   Updated: 2024/09/11 16:17:21 by rchavez          ###   ########.fr       */
+/*   Updated: 2024/09/24 10:43:11 by rchavez@stu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,21 @@ t_plane	*build_plane(char **arr, int xmin, int ymin)
 	int		i;
 	int		j;
 
-	plane = (t_plane *)malloc(sizeof(t_plane));
+	plane = (t_plane *)malloc_t(sizeof(t_plane));
 	if (!plane)
 		return (destroy_plane(plane), NULL);
 	plane->heigth = strnum(arr);
 	plane->width = maxlen(arr);
 	plane->xmin = xmin;
 	plane->ymin = ymin;
-	plane->grid = (void ***)malloc(sizeof(void **) * plane->width);
+	plane->grid = (void ***)malloc_t(sizeof(void **) * plane->width);
 	if (!plane->grid)
 		return (destroy_plane(plane), NULL);
 	i = -1;
 	while (++i < plane->width)
 	{
 		j = -1;
-		plane->grid[i] = (void **)malloc(sizeof(void *) * plane->heigth);
+		plane->grid[i] = (void **)malloc_t(sizeof(void *) * plane->heigth);
 		if (!plane->grid[i])
 			return (destroy_plane(plane), NULL);
 		while (++j < plane->heigth)
@@ -50,17 +50,17 @@ void	destroy_plane(t_plane *plane)
 		return ;
 	if (!plane->grid)
 	{
-		free(plane);
+		free_t(plane);
 		return ;
 	}
 	while (x < plane->width)
 	{
 		if (plane->grid[x])
-			free(plane->grid[x]);
+			free_t(plane->grid[x]);
 		else
 			break ;
 		x++;
 	}
-	free(plane->grid);
-	free(plane);
+	free_t(plane->grid);
+	free_t(plane);
 }
